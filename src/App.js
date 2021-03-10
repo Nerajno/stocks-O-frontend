@@ -11,9 +11,6 @@ function App () {
 		<div className="App">
 			<Navigation/>
 			<Home/>
-
-
-		
 					
     </div>
 	);
