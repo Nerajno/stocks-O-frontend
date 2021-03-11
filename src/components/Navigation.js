@@ -6,7 +6,7 @@ function Navigation() {
         <div className="navigation">
             <div class="container-flex">
           
-              <span class="nav-link active" aria-current="page" >paperTrade</span>
+              <span class="nav-link active" aria-current="page" >stocks-O</span>
               
               <ul class="justify-content-end">
                 <li class="nav-item">

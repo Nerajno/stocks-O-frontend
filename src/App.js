@@ -4,13 +4,15 @@ import React from "react";
 // import{ Navigation, Home }from "./components";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
+import SignUp from "./components/SignUp"
 //create your first component
 function App () {
 	
 	return (
 		<div className="App">
 			<Navigation/>
-			<Home/>
+			{/* <Home/> */}
+			<SignUp/>
 					
     </div>
 	);

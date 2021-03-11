@@ -26,11 +26,29 @@ body {
   padding-top: 10%;
 
 }
-
-.btn{
+.sign-up-page{
+  height:100vh;
+ padding-top: 5%;
+  display:flex;
+  justify-content: center;
+  background-color: yellow;
+}
+.sign-up-form{
+  background-color: blue;
+  width: 500px;
+  height:700px;
+  padding:  30px;
+   
+}
+.welcome{
+  padding-bottom: 40px;
+}
+.sign-up-button{
   justify-content: center;
   display:flex;
+  padding-top: 70px;
 }
+
 .getStarted{
   background-color: rgb(76, 76, 240);
   color:white;
