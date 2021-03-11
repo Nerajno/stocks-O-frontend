@@ -17,11 +17,16 @@ function SignUp() {
                 <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="username"/>
             </div>
             <div className="mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <label for="inputPassword3" className="col-sm-2 col-form-label">Password</label>
                 <input type="password" className="form-control" id="formGroupExampleInput2" placeholder="password"/>
             </div>
             <div  className= "sign-up-button">
-                <button type="submit" class="btn btn-primary">Sign up</button>
+                <button type="submit" className="btn btn-primary">Sign up</button>
+            </div>
+            <div className="already-have-account">
+                <span>
+                    Already have an account?<a href="/login"> Log in</a>
+                </span>
             </div>
             
         </form>

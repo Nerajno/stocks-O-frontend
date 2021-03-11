@@ -4,16 +4,19 @@ import { Link, withRouter } from "react-router-dom";
 function Navigation() {
     return(
         <div className="navigation">
-            <div class="container-flex">
+            <div className="container-flex">
           
-              <span class="nav-link active" aria-current="page" >stocks-O</span>
+              <span className="nav-link active" aria-current="page" >stocks-O</span>
               
-              <ul class="justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Log In</a>
+              <ul className="justify-content-end">
+              <li className="nav-item">
+                  <a className="nav-link" href="/home">Home</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Log Out</a>
+                <li className="nav-item">
+                  <a className="nav-link" href="/login">Log In</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/signup">Sign Up</a>
                 </li>
           
               

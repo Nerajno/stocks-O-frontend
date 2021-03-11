@@ -1,5 +1,5 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import{ Navigation, Home }from "./components";
 import Navigation from "./components/Navigation";
@@ -11,12 +11,16 @@ function App () {
 	
 	return (
 		<div className="App">
-			<Navigation/>
-			{/* <Home/> */}
-			{/* <SignUp/> */}
-			<LogIn/>
-					
-    </div>
+			<Router>
+				<Navigation/>
+				<Switch>
+					<Route path="/" exact component={()=><Home/>}/>
+					<Route path="/home" exact component={()=><Home/>}/>
+					<Route path="/login" exact component={()=><LogIn/>}/>
+					<Route path="/signup" exact component={()=><SignUp/>}/>
+				</Switch>
+			</Router>
+    	</div>
 	);
 }
 

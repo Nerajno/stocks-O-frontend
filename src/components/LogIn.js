@@ -14,14 +14,14 @@ function LogIn() {
 
             
             <div className="mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <label for="inputPassword3" className="col-sm-2 col-form-label">Password</label>
                 <input type="password" className="form-control" id="formGroupExampleInput2" placeholder="password"/>
             </div>
             <div className="reset">
-                <a> Forgot Password?</a>
+                <a href="#"> Forgot Password?</a>
             </div>
             <div  className= "log-in-button">
-                <button type="submit" class="btn btn-primary">Sign In</button>
+                <button type="submit" className="btn btn-primary">Sign In</button>
             </div>
             
         </form>
