@@ -26,15 +26,15 @@ body {
   padding-top: 10%;
 
 }
-.sign-up-page{
+.sign-up-page ,.log-in-page {
   height:100vh;
  padding-top: 5%;
   display:flex;
   justify-content: center;
   background-color: yellow;
 }
-.sign-up-form{
-  background-color: blue;
+.sign-up-form ,.log-in-form {
+  background-color: rgb(178, 178, 211);
   width: 500px;
   height:700px;
   padding:  30px;
@@ -43,7 +43,10 @@ body {
 .welcome{
   padding-bottom: 40px;
 }
-.sign-up-button{
+.reset{
+  float:right;
+}
+.sign-up-button,.log-in-button{
   justify-content: center;
   display:flex;
   padding-top: 70px;

@@ -4,7 +4,8 @@ import React from "react";
 // import{ Navigation, Home }from "./components";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
-import SignUp from "./components/SignUp"
+import SignUp from "./components/SignUp";
+import LogIn from "./components/LogIn";
 //create your first component
 function App () {
 	
@@ -12,7 +13,8 @@ function App () {
 		<div className="App">
 			<Navigation/>
 			{/* <Home/> */}
-			<SignUp/>
+			{/* <SignUp/> */}
+			<LogIn/>
 					
     </div>
 	);
