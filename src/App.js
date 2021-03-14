@@ -14,6 +14,7 @@ import Favorites from "./components/Favorites";
 
 
 function App () {
+	const [stocksData, setstocksData]= useState(null);
 	
 
 	useEffect(()=>{
@@ -33,6 +34,7 @@ function App () {
 .then((res)=>res.json())
 .then(data => {
 	console.log(data);
+	setstocksData(data.results);
 	
 })
 .catch(err => {
