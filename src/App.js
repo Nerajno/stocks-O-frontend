@@ -14,7 +14,7 @@ import Favorites from "./components/Favorites";
 
 
 function App () {
-	const [stocksData, setstocksData]= useState(null);
+	const [stocksData, setstocksData]= useState([]);
 	
 
 	useEffect(()=>{
@@ -22,7 +22,7 @@ function App () {
 	},[]);
 
 	
-	function getStocks(FAVORITES){
+	const getStocks=(FAVORITES)=>{
 		fetch("https://morning-star.p.rapidapi.com/market/v2/get-movers", {
 			"method": "GET",
 			"headers": {
@@ -34,7 +34,7 @@ function App () {
 .then((res)=>res.json())
 .then(data => {
 	console.log(data);
-	setstocksData(data.results);
+	setstocksData(data.actives);
 	
 })
 .catch(err => {
@@ -46,7 +46,12 @@ function App () {
 		<div className="App">
 			<Router>
 				<Navigation/>
-				<Favorites/>
+				<div>
+					{stocksData.length > 0 &&  stocksData.map((stocks)=>
+					 <Favorites key ={stocks.id}{...stocks}/>
+					)}
+				</div>
+				{/* <Favorites/> */}
 				{/* <Switch>
 					<Route path="/" exact component={()=><Home/>}/>
 					<Route path="/home" exact component={()=><Home/>}/>
