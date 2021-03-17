@@ -14,50 +14,20 @@ import Favorites from "./components/Favorites";
 
 
 function App () {
-	const [stocksData, setstocksData]= useState([]);
 	
-
-	useEffect(()=>{
-		getStocks()
-	},[]);
-
-	
-	const getStocks=(FAVORITES)=>{
-		fetch("https://morning-star.p.rapidapi.com/market/v2/get-movers", {
-			"method": "GET",
-			"headers": {
-				"x-rapidapi-key": "607c356a15msh664378701f6febfp170069jsn3c9f418ebaf0",
-				"x-rapidapi-host": "morning-star.p.rapidapi.com"
-			}
-			
-})
-.then((res)=>res.json())
-.then(data => {
-	console.log(data);
-	setstocksData(data.actives);
-	
-})
-.catch(err => {
-	console.error(err);
-
-});
-	}
 	return (
 		<div className="App">
 			<Router>
 				<Navigation/>
-				<div>
-					{stocksData.length > 0 &&  stocksData.map((stocks)=>
-					 <Favorites key ={stocks.id}{...stocks}/>
-					)}
-				</div>
+				
 				{/* <Favorites/> */}
-				{/* <Switch>
+				<Switch>
 					<Route path="/" exact component={()=><Home/>}/>
 					<Route path="/home" exact component={()=><Home/>}/>
 					<Route path="/login" exact component={()=><LogIn/>}/>
 					<Route path="/signup" exact component={()=><SignUp/>}/>
-				</Switch> */}
+					<Route path="/favorites" exact component={()=><Favorites/>}/>
+				</Switch>
 			</Router>
     	</div>
 	);
