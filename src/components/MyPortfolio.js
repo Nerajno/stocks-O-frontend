@@ -3,16 +3,17 @@ function MyPortfolio(){
     return(
         <div className="my_portfolio">
             <div className= "portfolio_header">
-                <span>Username: XXX</span>
-                <span>
+                <ul>
+                <li>
                     Portfolio Value:$10000.00
-                </span>
-                <span>
+                </li>
+                <li>
                     Net P&L : $-30.25
-                </span>
-                <span>
+                </li>
+                <li>
                     Cash Balance :$50.00
-                </span>
+                </li>
+                </ul>
 
 
             </div>

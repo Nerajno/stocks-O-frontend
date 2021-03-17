@@ -30,7 +30,7 @@ body {
 
 }
 
-.sign-up-page ,.log-in-page, .my_portfolio {
+.sign-up-page ,.log-in-page {
   height:100vh;
  padding-top: 5%;
   display:flex;
@@ -69,10 +69,13 @@ body {
 }
 .portfolio_header{
   background-color: purple;
-  display:block;
-  justify-content: end;
+  text-align: right;
 
 
+}
+.portfolio_header ul{
+  list-style: none;
+ 
 }
 
 
