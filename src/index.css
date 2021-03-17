@@ -30,7 +30,7 @@ body {
 
 }
 
-.sign-up-page ,.log-in-page {
+.sign-up-page ,.log-in-page, .my_portfolio {
   height:100vh;
  padding-top: 5%;
   display:flex;
@@ -67,7 +67,13 @@ body {
   border-radius: 10%;
   
 }
+.portfolio_header{
+  background-color: purple;
+  display:block;
+  justify-content: end;
 
+
+}
 
 
 .navigation{

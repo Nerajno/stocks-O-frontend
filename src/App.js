@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import LogIn from "./components/LogIn";
 import Favorites from "./components/Favorites";
+import MyPortfolio from "./components/MyPortfolio";
 //create your first component
 
 
@@ -27,6 +28,7 @@ function App () {
 					<Route path="/login" exact component={()=><LogIn/>}/>
 					<Route path="/signup" exact component={()=><SignUp/>}/>
 					<Route path="/favorites" exact component={()=><Favorites/>}/>
+					<Route path="/myportfolio" exact component={()=><MyPortfolio/>}/>
 				</Switch>
 			</Router>
     	</div>
