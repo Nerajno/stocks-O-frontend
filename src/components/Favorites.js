@@ -5,6 +5,8 @@ function FavoritesData({ticker,standardName,lastPrice,percentChange}){
     return(
         <table className="table">
                 
+                
+                
                 <tbody>
                     
                     <th scope="row">{ticker}</th>
@@ -54,6 +56,16 @@ function Favorites({ticker,standardName,lastPrice, percentChange}){
         
     return(
         <div>
+            <table className="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Last Price</th>
+                    <th scope="col">Open P&L</th>
+                    </tr>
+                </thead>
+                </table>
             {stocksData.length > 0 &&  stocksData.map((stocks)=>
                 <FavoritesData key ={stocks.id}{...stocks}/>
             )}
