@@ -33,7 +33,7 @@ function MyPortfolio(){
   </thead>
   <tbody>
     <tr>
-      <td scope="row">
+      <td >
           <li className="portfolioList">BTG</li>
           <li className="portfolioList">B2Gold</li>
       </td>

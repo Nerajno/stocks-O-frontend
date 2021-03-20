@@ -1,10 +1,11 @@
 import React,{useEffect, useState} from "react";
 
 
-function FavoritesData({price,change_percentage}){
+function FavoritesData({price,change_point,change_percentage}){
     return(
         <div>
             <div>Price:{price}</div>
+            <div>Profit/loss:{change_point}</div>
             <div>Percent Change:{change_percentage}</div>
         </div>
         // <table className="table">
@@ -23,7 +24,7 @@ function FavoritesData({price,change_percentage}){
     )
 }
 
-function Favorites({price, change_percentage}){
+function Favorites({price,change_point, change_percentage}){
     
     const [stocksData, setstocksData]= useState([]);
         
@@ -45,6 +46,7 @@ function Favorites({price, change_percentage}){
         .then((data) => {
             console.log(data);
             setstocksData(data);
+          
             
         })
         .catch(err => {
@@ -69,8 +71,10 @@ function Favorites({price, change_percentage}){
                     </tr>
                 </thead>
                 </table> */}
-            {stocksData.length > 0 && [stocksData].map(stocks=>
-                <FavoritesData key ="{stocks}"{...stocks}/>
+            {stocksData.length > 0 && [stocksData].push((stocks)=>
+                <FavoritesData key ="{stocks}"
+                {...stocks}
+                />
             )}
         </div>
 
@@ -86,3 +90,4 @@ function Favorites({price, change_percentage}){
 
 
 export default Favorites;
+
