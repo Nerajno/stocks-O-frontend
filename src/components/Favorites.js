@@ -1,39 +1,24 @@
 import React,{useEffect, useState} from "react";
 
 
-function FavoritesData({price,change_point,change_percentage}){
+function FavoritesData({price,change_point,change_percentage,...rest}){
+    console.log({price,change_point,change_percentage,rest});
     return(
         <div>
             <div>Price:{price}</div>
             <div>Profit/loss:{change_point}</div>
             <div>Percent Change:{change_percentage}</div>
         </div>
-        // <table className="table">
-                
-                
-                
-        //         <tbody>
-                    
-        //             <th scope="row">TESLA</th>
-                    
-        //             <td>{price}</td>
-        //             <td>{change_percentage}</td>
-                    
-        //         </tbody>
-        // </table>
     )
 }
 
 function Favorites({price,change_point, change_percentage}){
     
-    const [stocksData, setstocksData]= useState([]);
-        
-
+    const [stocksData, setstocksData]= useState({});
         useEffect(()=>{
             getStocks()
         },[]);
 
-    
         const getStocks=(FAVORITES)=>{
             fetch("https://realstonks.p.rapidapi.com/TSLA", {
             "method": "GET",
@@ -45,20 +30,15 @@ function Favorites({price,change_point, change_percentage}){
         .then((res)=>res.json())
         .then((data) => {
             console.log(data);
-            setstocksData(data);
-          
-            
+            console.log(typeof data);
+            setstocksData(JSON.parse(data)); 
+
         })
         .catch(err => {
             console.error(err);
-
         });
     }
-        
-
-
-        
-        
+       if(!stocksData) return null          
     return(
         <div>
             {/* <table className="table">
@@ -71,23 +51,12 @@ function Favorites({price,change_point, change_percentage}){
                     </tr>
                 </thead>
                 </table> */}
-            {stocksData.length > 0 && [stocksData].push((stocks)=>
-                <FavoritesData key ="{stocks}"
-                {...stocks}
-                />
-            )}
-        </div>
-
-            
-    
-        
-        
-    )
-       
+                {Object.keys(stocksData).length > 0 && (
+                <FavoritesData{...stocksData} />)
+            }
+        </div>   
+    )       
 };
-
-   
-
 
 export default Favorites;
 
